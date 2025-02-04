@@ -1,0 +1,22 @@
+[
+    {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "age": 30,
+        "balance": 1000,
+        "address": {
+            "street": "123 Main St",
+            "city": "New York"
+        }
+    },
+    {
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "age": 25,
+        "balance": 1500,
+        "address": {
+            "street": "456 Elm St",
+            "city": "Los Angeles"
+        }
+    }
+]
