@@ -1,7 +1,8 @@
-# Indexation des données dans Elasticsearch
+# 📌 Indexation des données dans Elasticsearch
 
-Fichier insert_data.sh :
-```
+## 📂 Fichier `insert_data.sh`
+
+```bash
 echo "📤 Insertion des données dans Elasticsearch..."
 
 curl -s -H "Content-Type: application/x-ndjson" -XPOST localhost:9200/receipe/_bulk --data-binary "@receipe.json" &&\
@@ -19,24 +20,36 @@ printf "\n✅ Insertion products index to elastic node OK ✅ \n"
 echo "🎉 Insertion terminée avec succès !"
 ```
 
-Lancement du fichier script :
-```
+## 🚀 Lancement du script
+
+```bash
 chmod +x insert_data.sh
 ./insert_data.sh
 ```
-![alt text](picture/indexation/image.png)
-(On peux voir sur l'image que ça n'as pas fonctionné mais j'ai réglé cela. Il fallait créer et 'remplir' les fichier par ligne de commandes "nano nom_du_fichier.json")
 
-## Vérification des données
-### Liste des index disponibles
+![Indexation Elasticsearch](picture/indexation/image.png)
+
+ℹ️ *Sur l'image ci-dessus, l'indexation ne fonctionne pas. Le problème a été résolu en créant et remplissant les fichiers JSON avec la commande :*
+```bash
+nano nom_du_fichier.json
 ```
+
+---
+
+## ✅ Vérification des données
+
+### 🔍 Liste des index disponibles
+
+```bash
 curl -XGET "localhost:9200/_cat/indices?v"
 ```
-![alt text](picture/indexation/image-1.png)
 
-### Recherche tous les documents dans l'index movies
-```
+![Liste des index](picture/indexation/image-1.png)
+
+### 🎬 Recherche de tous les documents dans l'index `movies`
+
+```bash
 curl -XGET "localhost:9200/movies/_search?pretty=true"
 ```
-![alt text](picture/indexation/image-2.png)
 
+![Résultat de la recherche](picture/indexation/image-2.png)

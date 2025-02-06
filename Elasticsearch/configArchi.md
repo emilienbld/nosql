@@ -1,8 +1,10 @@
-# Configurer une architecture multi-nœuds Docker
+# ⚙️ Configurer une Architecture Multi-Nœuds Docker
 
-## Lancer le cluster
-Créer le fichier "docker-compose.yml" suivant :
-```
+## 🚀 Lancer le Cluster
+
+Créer le fichier `docker-compose.yml` suivant :
+
+```yaml
 version: '3'
 services:
   es01:
@@ -80,27 +82,34 @@ networks:
     driver: bridge
 ```
 
-Puis faire :
-```
+Démarrer le cluster avec :
+
+```bash
 docker-compose up -d
 ```
 
-![alt text](picture/configArchi/image-2.png)
+![Démarrage du cluster](picture/configArchi/image-2.png)
 
-## Vérifier que le cluster fonctionne
-### Vérifier l’état du cluster :
-```
+---
+
+## ✅ Vérifier que le Cluster Fonctionne
+
+### 📌 Vérifier l’État du Cluster
+
+```bash
 curl 0.0.0.0:9200/_cluster/health?pretty
 ```
-- L’état doit être "green" ou "yellow" (évite "red" = problème).
 
-![alt text](picture/configArchi/image-3.png)
+L’état doit être `green` ou `yellow` (éviter `red` = problème).
 
-### Voir les nœuds du cluster :
-```
+![Vérification de l'état](picture/configArchi/image-3.png)
+
+### 📌 Voir les Nœuds du Cluster
+
+```bash
 curl -X GET "http://0.0.0.0:9200/_cat/nodes?v"
 ```
-- Affiche la liste des nœuds avec leur rôle.
 
-![alt text](picture/configArchi/image-4.png)
+Affiche la liste des nœuds avec leur rôle.
 
+![Affichage des nœuds](picture/configArchi/image-4.png)
