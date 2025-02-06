@@ -57,4 +57,4 @@ sudo chmod -R 777 ./elas1/
 ![alt text](image-2.png)
 
 ### Teste vérif des indices :
-![alt text](image-3.png)
+![alt text](image-4.png)

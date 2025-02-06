@@ -25,6 +25,7 @@ chmod +x insert_data.sh
 ./insert_data.sh
 ```
 ![alt text](picture/indexation/image.png)
+(On peux voir sur l'image que ça n'as pas fonctionné mais j'ai réglé cela. Il fallait créer et 'remplir' les fichier par ligne de commandes "nano nom_du_fichier.json")
 
 ## Vérification des données
 ### Liste des index disponibles
